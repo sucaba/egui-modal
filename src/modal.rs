@@ -476,7 +476,7 @@ impl Modal {
                 .interactable(true)
                 .fixed_pos(Pos2::ZERO)
                 .show(&self.ctx, |ui: &mut Ui| {
-                    let screen_rect = ui.ctx().input(|i| i.screen_rect);
+                    let screen_rect = ui.ctx().input(|i| i.content_rect());
                     let area_response = ui.allocate_response(screen_rect.size(), Sense::click());
                     // let current_focus = area_response.ctx.memory().focus().clone();
                     // let top_layer = area_response.ctx.memory().layer_ids().last();
